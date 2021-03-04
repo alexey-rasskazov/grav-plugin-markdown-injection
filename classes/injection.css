@@ -1,0 +1,5 @@
+input[data-var] {
+    font-family: 'SF Mono','Segoe UI Mono','Roboto Mono',Menlo,Courier,monospace;
+    font-size: 85%;
+    padding: 0 0.2em;
+}

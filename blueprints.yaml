@@ -1,0 +1,36 @@
+name: Markdown Injection
+slug: markdown-injection
+type: plugin
+version: 0.1.0
+description: Allows to inject variables into the page markdown
+icon: plug
+author:
+  name: Alexey Rasskazov
+  email: ra0702@yandex.ru
+homepage: https://github.com/alexey-rasskazov/grav-plugin-markdown-injection
+demo: http://demo.yoursite.com
+keywords: grav, plugin
+bugs: https://github.com/alexey-rasskazov/grav-plugin-markdown-injection/issues
+docs: https://github.com/alexey-rasskazov/grav-plugin-markdown-injection/blob/master/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_MARKDOWN_INJECTION.TEXT_VARIABLE
+      help: PLUGIN_MARKDOWN_INJECTION.TEXT_VARIABLE_HELP

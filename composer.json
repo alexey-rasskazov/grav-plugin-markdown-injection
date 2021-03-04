@@ -1,0 +1,29 @@
+{
+  "name": "alexey-rasskazov/markdown-injection",
+  "type": "grav-plugin",
+  "description": "Allows to inject variables into the page markdown",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/alexey-rasskazov/grav-plugin-markdown-injection",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexey Rasskazov",
+      "email": "ra0702@yandex.ru",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\MarkdownInjection\\": "classes/"
+    },
+    "classmap":  ["markdown-injection.php"]
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.3"
+    }
+  }
+}
