@@ -36,17 +36,27 @@ var variables = {
 }
 </script>
 ```
-Then you can use these variables in you markdown code
+Then you can use these variables in you markdown text
 
-```
-Variable 1 value is {{{ name1 }}}, Variable 2 value is {{{ name2 }}}
+```html
+Variable 1 value is <span data-var="name1"></span>, Variable 2 value is <span data-var="name2"></span>
 ```
 
 ### Binding variables to input fields
 
-There is a way to bind variable and input tag. Bound variables will be dynamically updated with user input.
+It is possible to bind a variable and an input tag. Bound variables will be dynamically updated with user input.
 
 ```html
 You can change variable here: <input data-var="name1" autocomplete="off">
-and watch it's changing here {{{ name1 }}}
+and watch it's changing here <span data-var="name1"></span>
+```
+
+If you want to place a variable in some code block you must use special syntax
+
+```md
+Some text `inline code with the {{{ name1 }}} variable`
+
+    Some code containing the {{{ name2 }}} variable
+
+Some text continues...
 ```
